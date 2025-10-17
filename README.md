@@ -45,4 +45,4 @@ Dieses Repository bündelt automatisch alle **Shopware 5 Plugins** aus der Organ
 | **TwitterTweet** | Das Plugin fügt in der Artikeldetailansicht einen Tweet Button für Twitter ein. Der Button wird mit einer horizontale Zählung dargestellt. | [Link](https://github.com/bauer-group/SWP-TwitterTweet) |
 
 ---
-_Automatisch generiert: 2025-10-17 19:41 UTC_
+_Automatisch generiert: 2025-10-17 19:44 UTC_
