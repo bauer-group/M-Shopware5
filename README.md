@@ -6,8 +6,6 @@
 
 **Last synchronized:** 2025-10-17 23:42 UTC
 
-## 🧩 Inhalt
-
 ## 📦 Enthaltene Plugins
 
 Die gesamte Sammlung von Plugins für Shopware 5.
