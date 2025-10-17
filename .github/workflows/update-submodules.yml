@@ -1,4 +1,4 @@
-name: 🛒 Sync Shopware 5 Plugins
+name: 🧩 Synchronize Projects
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   sync-plugins:
-    name: Sync Submodules
+    name: Synchronize
     uses: bauer-group/automation-templates/.github/workflows/meta-repository-sync.yml@main
     with:
       config-file: '.github/config/repository.json'
