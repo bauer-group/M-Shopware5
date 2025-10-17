@@ -3,8 +3,16 @@
 
 $ErrorActionPreference = "Stop"
 
+# Get repository name from git remote
+try {
+    $remoteUrl = git config --get remote.origin.url
+    $repoName = [System.IO.Path]::GetFileNameWithoutExtension($remoteUrl)
+} catch {
+    $repoName = "Repository"
+}
+
 Write-Host "=========================================" -ForegroundColor Cyan
-Write-Host "Updating X-Shopware5 Repository" -ForegroundColor Cyan
+Write-Host "Updating $repoName" -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 
 # Check if git lfs is installed
