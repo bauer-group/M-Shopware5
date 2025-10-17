@@ -1,8 +1,11 @@
 #!/bin/bash
 # Check status of repository and all submodules (Linux/Mac)
 
+# Get repository name from git remote
+REPO_NAME=$(basename -s .git $(git config --get remote.origin.url) 2>/dev/null || echo "Repository")
+
 echo "========================================="
-echo "X-Shopware5 Repository Status"
+echo "$REPO_NAME Status"
 echo "========================================="
 
 # Colors for output

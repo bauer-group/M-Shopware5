@@ -3,8 +3,11 @@
 
 set -e
 
+# Get repository name from git remote
+REPO_NAME=$(basename -s .git $(git config --get remote.origin.url) 2>/dev/null || echo "Repository")
+
 echo "========================================="
-echo "Pushing X-Shopware5 Repository Changes"
+echo "Pushing $REPO_NAME Changes"
 echo "========================================="
 
 # Colors for output

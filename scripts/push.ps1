@@ -7,8 +7,16 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# Get repository name from git remote
+try {
+    $remoteUrl = git config --get remote.origin.url
+    $repoName = [System.IO.Path]::GetFileNameWithoutExtension($remoteUrl)
+} catch {
+    $repoName = "Repository"
+}
+
 Write-Host "=========================================" -ForegroundColor Cyan
-Write-Host "Pushing X-Shopware5 Repository Changes" -ForegroundColor Cyan
+Write-Host "Pushing $repoName Changes" -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 
 # Get commit message
@@ -28,15 +36,15 @@ $currentBranch = git branch --show-current
 # Check for changes in submodules
 Write-Host ""
 Write-Host "Step 1/4: Checking for submodule changes..." -ForegroundColor White
-$submoduleChanges = $false
+$hasSubmoduleChanges = $false
 git submodule foreach --quiet 'git status --porcelain' | ForEach-Object {
     if ($_.Trim()) {
-        $submoduleChanges = $true
+        $hasSubmoduleChanges = $true
     }
 }
 
 # Commit and push submodules if there are changes
-if ($submoduleChanges) {
+if ($hasSubmoduleChanges) {
     Write-Host ""
     Write-Host "Step 2/4: Committing and pushing submodule changes..." -ForegroundColor White
     git submodule foreach "
@@ -57,7 +65,7 @@ if ($submoduleChanges) {
 Write-Host ""
 Write-Host "Step 3/4: Committing main repository changes..." -ForegroundColor White
 git add -A
-$stagedChanges = git diff --staged --quiet
+git diff --staged --quiet
 if ($LASTEXITCODE -ne 0) {
     git commit -m $CommitMessage
 } else {

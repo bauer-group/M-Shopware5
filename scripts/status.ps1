@@ -1,7 +1,15 @@
 # Check status of repository and all submodules (Windows PowerShell)
 
+# Get repository name from git remote
+try {
+    $remoteUrl = git config --get remote.origin.url
+    $repoName = [System.IO.Path]::GetFileNameWithoutExtension($remoteUrl)
+} catch {
+    $repoName = "Repository"
+}
+
 Write-Host "=========================================" -ForegroundColor Cyan
-Write-Host "X-Shopware5 Repository Status" -ForegroundColor Cyan
+Write-Host "$repoName Status" -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 
 # Get current branch

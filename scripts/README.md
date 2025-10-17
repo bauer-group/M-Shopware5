@@ -1,6 +1,6 @@
-# X-Shopware5 Repository Scripts
+# Git Repository Management Scripts
 
-Diese Sammlung von Skripten erleichtert die Verwaltung des X-Shopware5 Repositories mit allen Submodulen.
+Diese Sammlung von Skripten erleichtert die Verwaltung von Git-Repositories mit Submodulen. Die Skripte sind generisch und können in jedem Repository mit Submodulen verwendet werden.
 
 ## Verfügbare Skripte
 
@@ -75,14 +75,18 @@ Klont das komplette Repository mit allen Submodulen (für neue Setups).
 
 **Linux/Mac:**
 ```bash
-./scripts/clone.sh [Zielverzeichnis]
-# Standard: ./X-Shopware5
+./scripts/clone.sh <repository-url> [Zielverzeichnis]
+# Beispiel:
+./scripts/clone.sh https://github.com/bauer-group/X-Shopware5.git
+./scripts/clone.sh https://github.com/bauer-group/X-Shopware5.git mein-ordner
 ```
 
 **Windows (PowerShell):**
 ```powershell
-.\scripts\clone.ps1 [Zielverzeichnis]
-# Standard: .\X-Shopware5
+.\scripts\clone.ps1 <repository-url> [Zielverzeichnis]
+# Beispiel:
+.\scripts\clone.ps1 https://github.com/bauer-group/X-Shopware5.git
+.\scripts\clone.ps1 https://github.com/bauer-group/X-Shopware5.git mein-ordner
 ```
 
 **Was macht es:**
@@ -138,7 +142,7 @@ chmod +x scripts/*.sh
 ### Neues Repository Setup
 ```bash
 # Komplettes Repo mit allen Submodulen klonen
-./scripts/clone.sh mein-verzeichnis
+./scripts/clone.sh https://github.com/user/repo.git mein-verzeichnis
 cd mein-verzeichnis
 
 # Status prüfen
@@ -185,10 +189,5 @@ git commit -m "Resolve submodule conflict"
 - Die Skripte arbeiten mit dem **aktuellen Branch**
 - Bei Fehlern werden die Skripte mit einer Fehlermeldung abgebrochen
 - Farbige Ausgaben helfen bei der Übersicht (Grün = Erfolg, Gelb = Warnung, Rot = Fehler)
-
-## Repository-Struktur
-
-Dieses Repository enthält ausschließlich Shopware 5 Plugins als Submodule:
-- **Plugins/** - Alle Plugin-Submodule
-- **.github/workflows/** - GitHub Actions Workflows
-- **scripts/** - Diese Management-Skripte
+- **Die Skripte sind generisch** und ermitteln den Repository-Namen automatisch aus der Git-Remote-URL
+- Skripte können in beliebige Repositories kopiert und dort verwendet werden

@@ -2,16 +2,31 @@
 # Supports Git LFS
 
 param(
-    [Parameter(Position=0)]
-    [string]$TargetDir = "X-Shopware5"
+    [Parameter(Position=0, Mandatory=$true)]
+    [string]$RepoUrl,
+
+    [Parameter(Position=1)]
+    [string]$TargetDir
 )
 
 $ErrorActionPreference = "Stop"
 
-$repoUrl = "https://github.com/bauer-group/X-Shopware5.git"
+# Validate repository URL
+if ([string]::IsNullOrWhiteSpace($RepoUrl)) {
+    Write-Host "Error: Repository URL is required" -ForegroundColor Red
+    Write-Host "Usage: .\clone.ps1 <repository-url> [target-directory]"
+    Write-Host "Example: .\clone.ps1 https://github.com/user/repo.git my-folder"
+    exit 1
+}
+
+# Extract repo name from URL for default directory
+$repoName = [System.IO.Path]::GetFileNameWithoutExtension($RepoUrl)
+if ([string]::IsNullOrWhiteSpace($TargetDir)) {
+    $TargetDir = $repoName
+}
 
 Write-Host "=========================================" -ForegroundColor Cyan
-Write-Host "Cloning X-Shopware5 Repository" -ForegroundColor Cyan
+Write-Host "Cloning $repoName" -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 
 # Check if git lfs is installed
@@ -27,8 +42,8 @@ try {
 
 # Clone repository
 Write-Host ""
-Write-Host "Step 1/3: Cloning main repository..." -ForegroundColor White
-git clone $repoUrl $TargetDir
+Write-Host "Step 1/3: Cloning main repository to $TargetDir..." -ForegroundColor White
+git clone $RepoUrl $TargetDir
 
 Set-Location $TargetDir
 
