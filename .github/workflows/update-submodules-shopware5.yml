@@ -13,6 +13,9 @@ jobs:
   sync-shopware5:
     runs-on: ubuntu-latest
 
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,18 +30,17 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-      - name: Authenticate GitHub CLI
-        run: gh auth setup-git
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Fetch all repos with topic shopware5-plugins
         id: fetch
         run: |
           ORG="${{ github.repository_owner }}"
           echo "Fetching repos for org: $ORG"
           gh api orgs/$ORG/repos --paginate --jq '
-            [.[] | select(.topics[]? == "shopware5-plugins") | {name: .name, html_url: .html_url, description: .description}]' > repos.json
+            [.[] 
+              | select(.topics[]? == "shopware5-plugins") 
+              | {name: .name, html_url: .html_url, description: .description}
+            ]' > repos.json
+          echo "Found $(jq length repos.json) repositories with topic shopware5-plugins."
           jq -r '.[].name' repos.json
 
       - name: Sync submodules (add / update / remove)
@@ -49,7 +51,6 @@ jobs:
           # Liste der gültigen Plugin-Repos (nach Prefix-Bereinigung)
           jq -r '.[].name' repos.json | sed -E 's/^SWP[-_]//i' > valid_plugins.txt
 
-          # --- Entfernen alter Submodules, die nicht mehr existieren ---
           echo "🧹 Checking for outdated submodules..."
           find "$BASE_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
             plugin=$(basename "$dir")
@@ -62,7 +63,6 @@ jobs:
             fi
           done
 
-          # --- Hinzufügen oder Aktualisieren ---
           echo "🔄 Syncing submodules..."
           while read -r row; do
             name=$(echo "$row" | jq -r '.name')
@@ -106,3 +106,4 @@ jobs:
           else
             echo "No changes to commit."
           fi
+    
