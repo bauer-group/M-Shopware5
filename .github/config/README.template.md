@@ -4,48 +4,29 @@
 
 ---
 
-## Inhaltsverzeichnis
-
-- [{{TITLE}}](#title)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Übersicht](#übersicht)
-  - [Projektstruktur](#projektstruktur)
-  - [🔄 Automatische Synchronisierung](#-automatische-synchronisierung)
-  - [Lizenz](#lizenz)
-    - [Hinweis](#hinweis)
-
----
-
-## Übersicht
+## Projektstruktur
 
 **Letzte Synchronisierung:** {{DATE}}
 
-Dieses Repository enthält eine kuratierte Sammlung von Projekten der {{ORGANIZATION}}, die automatisch verwaltet und aktualisiert werden.
+Dieses Repository enthält eine kuratierte Sammlung von Projekten der `{{ORGANIZATION}}`, die automatisch verwaltet und aktualisiert werden.
 
----
-
-## Projektstruktur
 
 {{GROUPS}}
 
 ---
 
-## 🔄 Automatische Synchronisierung
+### 🔄 Automatische Synchronisierung
 
-Dieses Repository wird vollständig automatisiert durch GitHub Actions verwaltet:
+Dieses Repository wird vollständig automatisiert durch GitHub Actions verwaltet.
 
 | Parameter | Wert |
 |-----------|------|
 | **Organisation** | {{ORGANIZATION}} |
 | **Aktualisierungsplan** | Wöchentlich, jeden Samstag um 23:45 UTC |
 
----
-
-## Lizenz
+### Lizenz
 
 Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beachten Sie die jeweiligen LICENSE-Dateien in den Projekt-Repositories.
-
----
 
 ### Hinweis
 
