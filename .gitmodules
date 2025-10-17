@@ -1,0 +1,111 @@
+[submodule "Plugins/CreateDocuments"]
+	path = Plugins/CreateDocuments
+	url = https://github.com/bauer-group/SWP-CreateDocuments
+[submodule "Plugins/DocumentAppend"]
+	path = Plugins/DocumentAppend
+	url = https://github.com/bauer-group/SWP-DocumentAppend
+[submodule "Plugins/DocumentSender"]
+	path = Plugins/DocumentSender
+	url = https://github.com/bauer-group/SWP-DocumentSender
+[submodule "Plugins/DocumentsSafety"]
+	path = Plugins/DocumentsSafety
+	url = https://github.com/bauer-group/SWP-DocumentsSafety
+[submodule "Plugins/FullIPAddress"]
+	path = Plugins/FullIPAddress
+	url = https://github.com/bauer-group/SWP-FullIPAddress
+[submodule "Plugins/OrderStatusAutomation"]
+	path = Plugins/OrderStatusAutomation
+	url = https://github.com/bauer-group/SWP-OrderStatusAutomation
+[submodule "Plugins/OrderTimestampCorrection"]
+	path = Plugins/OrderTimestampCorrection
+	url = https://github.com/bauer-group/SWP-OrderTimestampCorrection
+[submodule "Plugins/TaxIdentification"]
+	path = Plugins/TaxIdentification
+	url = https://github.com/bauer-group/SWP-TaxIdentification
+[submodule "Plugins/DocumentAPI"]
+	path = Plugins/DocumentAPI
+	url = https://github.com/bauer-group/SWP-DocumentAPI
+[submodule "Plugins/AmazonToolkit"]
+	path = Plugins/AmazonToolkit
+	url = https://github.com/bauer-group/SWP-AmazonToolkit
+[submodule "Plugins/BootstrapIntegration"]
+	path = Plugins/BootstrapIntegration
+	url = https://github.com/bauer-group/SWP-BootstrapIntegration
+[submodule "Plugins/CookieConsent"]
+	path = Plugins/CookieConsent
+	url = https://github.com/bauer-group/SWP-CookieConsent
+[submodule "Plugins/CovidTickets"]
+	path = Plugins/CovidTickets
+	url = https://github.com/bauer-group/SWP-CovidTickets
+[submodule "Plugins/CustomerDiscount"]
+	path = Plugins/CustomerDiscount
+	url = https://github.com/bauer-group/SWP-CustomerDiscount
+[submodule "Plugins/CustomPriceFluctuation"]
+	path = Plugins/CustomPriceFluctuation
+	url = https://github.com/bauer-group/SWP-CustomPriceFluctuation
+[submodule "Plugins/CustomPriceManager"]
+	path = Plugins/CustomPriceManager
+	url = https://github.com/bauer-group/SWP-CustomPriceManager
+[submodule "Plugins/GermanVATChanger"]
+	path = Plugins/GermanVATChanger
+	url = https://github.com/bauer-group/SWP-GermanVATChanger
+[submodule "Plugins/IndependentShippingNotification"]
+	path = Plugins/IndependentShippingNotification
+	url = https://github.com/bauer-group/SWP-IndependentShippingNotification
+[submodule "Plugins/ListingPromotions"]
+	path = Plugins/ListingPromotions
+	url = https://github.com/bauer-group/SWP-ListingPromotions
+[submodule "Plugins/MailMessageBlocker"]
+	path = Plugins/MailMessageBlocker
+	url = https://github.com/bauer-group/SWP-MailMessageBlocker
+[submodule "Plugins/RemoveBackground"]
+	path = Plugins/RemoveBackground
+	url = https://github.com/bauer-group/SWP-RemoveBackground
+[submodule "Plugins/SalesVolumeLimiter"]
+	path = Plugins/SalesVolumeLimiter
+	url = https://github.com/bauer-group/SWP-SalesVolumeLimiter
+[submodule "Plugins/BauergroupSlowArticleExport"]
+	path = Plugins/BauergroupSlowArticleExport
+	url = https://github.com/bauer-group/SWP-BauergroupSlowArticleExport
+[submodule "Plugins/SMSNotifier"]
+	path = Plugins/SMSNotifier
+	url = https://github.com/bauer-group/SWP-SMSNotifier
+[submodule "Plugins/SpecialSaleExtension"]
+	path = Plugins/SpecialSaleExtension
+	url = https://github.com/bauer-group/SWP-SpecialSaleExtension
+[submodule "Plugins/StockBalanceByPackaging"]
+	path = Plugins/StockBalanceByPackaging
+	url = https://github.com/bauer-group/SWP-StockBalanceByPackaging
+[submodule "Plugins/WarrantyReminder"]
+	path = Plugins/WarrantyReminder
+	url = https://github.com/bauer-group/SWP-WarrantyReminder
+[submodule "Plugins/ZammadIntegration"]
+	path = Plugins/ZammadIntegration
+	url = https://github.com/bauer-group/SWP-ZammadIntegration
+[submodule "Plugins/ArticleWeight"]
+	path = Plugins/ArticleWeight
+	url = https://github.com/bauer-group/SWP-ArticleWeight
+[submodule "Plugins/CheckoutPromotion"]
+	path = Plugins/CheckoutPromotion
+	url = https://github.com/bauer-group/SWP-CheckoutPromotion
+[submodule "Plugins/AppleIOS933Hotfix"]
+	path = Plugins/AppleIOS933Hotfix
+	url = https://github.com/bauer-group/SWP-AppleIOS933Hotfix
+[submodule "Plugins/AutomaticDocuments"]
+	path = Plugins/AutomaticDocuments
+	url = https://github.com/bauer-group/SWP-AutomaticDocuments
+[submodule "Plugins/CheckoutCostCenter"]
+	path = Plugins/CheckoutCostCenter
+	url = https://github.com/bauer-group/SWP-CheckoutCostCenter
+[submodule "Plugins/CustomerDataInTemplate"]
+	path = Plugins/CustomerDataInTemplate
+	url = https://github.com/bauer-group/SWP-CustomerDataInTemplate
+[submodule "Plugins/ShoppingWorldVimeo"]
+	path = Plugins/ShoppingWorldVimeo
+	url = https://github.com/bauer-group/SWP-ShoppingWorldVimeo
+[submodule "Plugins/SocialRecommend"]
+	path = Plugins/SocialRecommend
+	url = https://github.com/bauer-group/SWP-SocialRecommend
+[submodule "Plugins/TwitterTweet"]
+	path = Plugins/TwitterTweet
+	url = https://github.com/bauer-group/SWP-TwitterTweet
