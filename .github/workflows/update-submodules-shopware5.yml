@@ -1,0 +1,108 @@
+name: Update Shopware 5 Submodules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 23 * * 6" #Every Saturday at 23:45 UTC
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  sync-shopware5:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: recursive
+
+      - name: Setup environment
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y jq gh
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Authenticate GitHub CLI
+        run: gh auth setup-git
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch all repos with topic shopware5-plugins
+        id: fetch
+        run: |
+          ORG="${{ github.repository_owner }}"
+          echo "Fetching repos for org: $ORG"
+          gh api orgs/$ORG/repos --paginate --jq '
+            [.[] | select(.topics[]? == "shopware5-plugins") | {name: .name, html_url: .html_url, description: .description}]' > repos.json
+          jq -r '.[].name' repos.json
+
+      - name: Sync submodules (add / update / remove)
+        run: |
+          BASE_DIR="Plugins"
+          mkdir -p "$BASE_DIR"
+
+          # Liste der gültigen Plugin-Repos (nach Prefix-Bereinigung)
+          jq -r '.[].name' repos.json | sed -E 's/^SWP[-_]//i' > valid_plugins.txt
+
+          # --- Entfernen alter Submodules, die nicht mehr existieren ---
+          echo "🧹 Checking for outdated submodules..."
+          find "$BASE_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
+            plugin=$(basename "$dir")
+            if ! grep -qx "$plugin" valid_plugins.txt; then
+              echo "Removing obsolete submodule: $plugin"
+              git submodule deinit -f "$dir" || true
+              git rm -f "$dir" || true
+              rm -rf ".git/modules/$dir" || true
+              rm -rf "$dir"
+            fi
+          done
+
+          # --- Hinzufügen oder Aktualisieren ---
+          echo "🔄 Syncing submodules..."
+          while read -r row; do
+            name=$(echo "$row" | jq -r '.name')
+            url=$(echo "$row" | jq -r '.html_url')
+            desc=$(echo "$row" | jq -r '.description')
+            clean_name=$(echo "$name" | sed -E 's/^SWP[-_]//i')
+            path="$BASE_DIR/$clean_name"
+
+            if [ ! -d "$path" ]; then
+              echo "Adding new submodule: $clean_name"
+              git submodule add -f "$url" "$path" || true
+            else
+              echo "Updating existing submodule: $clean_name"
+              (cd "$path" && git fetch && git checkout main 2>/dev/null || git checkout master 2>/dev/null || true && git pull) || true
+            fi
+          done < <(jq -c '.[]' repos.json)
+
+      - name: Generate README.md
+        run: |
+          echo "# 🧩 Shopware 5 Plugins" > README.md
+          echo "" >> README.md
+          echo "Dieses Repository bündelt automatisch alle **Shopware 5 Plugins** aus der Organisation \`${{ github.repository_owner }}\` mit dem Topic \`shopware5-plugins\`." >> README.md
+          echo "" >> README.md
+          echo "## 📦 Enthaltene Plugins" >> README.md
+          echo "" >> README.md
+          echo "| Plugin | Beschreibung | Repository |" >> README.md
+          echo "|--------|---------------|-------------|" >> README.md
+
+          jq -r '.[] | "| **\(.name | sub("^SWP[-_]" ; ""))** | \(.description // "_Keine Beschreibung verfügbar_") | [Link](\(.html_url)) |"' repos.json >> README.md
+
+          echo "" >> README.md
+          echo "---" >> README.md
+          echo "_Automatisch generiert: $(date -u '+%Y-%m-%d %H:%M UTC')_" >> README.md
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "🔄 Weekly auto-sync: Shopware 5 plugins"
+            git push origin main
+          else
+            echo "No changes to commit."
+          fi
