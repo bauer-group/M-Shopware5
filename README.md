@@ -1,20 +1,16 @@
 # 🛒 Shopware 5
 
-> 🧩 Dieses Repository bündelt automatisch alle **Shopware 5 Plugins** aus der Organisation `bauer-group` mit dem Topic `shopware5-plugins`.
+> Dieses Repository bündelt automatisch alle **Shopware 5 Plugins** aus der Organisation `bauer-group` mit dem Topic `shopware5-plugins`.
 
 ---
 
-## 📋 Overview
+**Last synchronized:** 2025-10-17 23:42 UTC
 
-This meta repository automatically synchronizes and organizes projects from the **bauer-group** organization based on GitHub topics.
-
-**Last synchronized:** 2025-10-17 23:32 UTC
-
-## 📦 Project Collections
+## 🧩 Inhalt
 
 ## 📦 Enthaltene Plugins
 
-Die gesamte Sammlung von Plugins für Shopware 5
+Die gesamte Sammlung von Plugins für Shopware 5.
 
 | Repository | Description | Link |
 |------------|-------------|------|
@@ -62,9 +58,11 @@ Die gesamte Sammlung von Plugins für Shopware 5
 
 This repository is automatically maintained by GitHub Actions:
 
+- **Organisation**: **bauer-group**
 - **Schedule**: Weekly updates every Saturday at 23:45 UTC
 
 ---
 
 *This README is automatically generated. Do not edit manually - changes will be overwritten.*
-*Generated on 2025-10-17 23:32 UTC*
+
+*Generated on 2025-10-17 23:42 UTC*
