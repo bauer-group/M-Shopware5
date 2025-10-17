@@ -3,7 +3,7 @@ name: Update Shopware 5 Submodules
 on:
   workflow_dispatch:
   schedule:
-    - cron: "45 23 * * 6" #Every Saturday at 23:45 UTC
+    - cron: "45 23 * * 6"  # jeden Samstag 23:45 UTC
 
 permissions:
   contents: write
@@ -38,7 +38,7 @@ jobs:
           gh api orgs/$ORG/repos --paginate --jq '
             [.[] 
               | select(.topics[]? == "shopware5-plugins") 
-              | {name: .name, html_url: .html_url, description: .description}
+              | {name: .name, html_url: .html_url, description: .description, default_branch: .default_branch}
             ]' > repos.json
           echo "Found $(jq length repos.json) repositories with topic shopware5-plugins."
           jq -r '.[].name' repos.json
@@ -49,12 +49,12 @@ jobs:
           mkdir -p "$BASE_DIR"
 
           # Liste der gültigen Plugin-Repos (nach Prefix-Bereinigung)
-          jq -r '.[].name' repos.json | sed -E 's/^SWP[-_]//i' > valid_plugins.txt
+          jq -r '.[].name' repos.json | sed -E 's/^SWP[-_]//i' > plugins.txt
 
           echo "🧹 Checking for outdated submodules..."
           find "$BASE_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
             plugin=$(basename "$dir")
-            if ! grep -qx "$plugin" valid_plugins.txt; then
+            if ! grep -qx "$plugin" plugins.txt; then
               echo "Removing obsolete submodule: $plugin"
               git submodule deinit -f "$dir" || true
               git rm -f "$dir" || true
@@ -68,16 +68,26 @@ jobs:
             name=$(echo "$row" | jq -r '.name')
             url=$(echo "$row" | jq -r '.html_url')
             desc=$(echo "$row" | jq -r '.description')
+            branch=$(echo "$row" | jq -r '.default_branch')
             clean_name=$(echo "$name" | sed -E 's/^SWP[-_]//i')
             path="$BASE_DIR/$clean_name"
 
             if [ ! -d "$path" ]; then
-              echo "Adding new submodule: $clean_name"
-              git submodule add -f "$url" "$path" || true
+              echo "Adding new submodule: $clean_name (branch: $branch)"
+              git submodule add -b "$branch" "$url" "$path" || true
             else
-              echo "Updating existing submodule: $clean_name"
-              (cd "$path" && git fetch && git checkout main 2>/dev/null || git checkout master 2>/dev/null || true && git pull) || true
+              echo "Updating existing submodule: $clean_name (branch: $branch)"
+              (
+                cd "$path"
+                git fetch origin "$branch" --depth 1 || true
+                git checkout "$branch" 2>/dev/null || git checkout -B "$branch" "origin/$branch" || true
+                git pull origin "$branch" || true
+              )
             fi
+
+            # Submodule soll auf aktuelles Commit des Default-Branches zeigen
+            (cd "$path" && latest_commit=$(git rev-parse HEAD))
+            git add "$path"
           done < <(jq -c '.[]' repos.json)
 
       - name: Generate README.md
@@ -106,4 +116,3 @@ jobs:
           else
             echo "No changes to commit."
           fi
-    
