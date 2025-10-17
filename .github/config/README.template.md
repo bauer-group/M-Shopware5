@@ -10,14 +10,6 @@ This meta repository automatically synchronizes and organizes projects from the 
 
 **Last synchronized:** {{DATE}}
 
-## 🎯 Purpose
-
-This repository serves as a central hub for:
-- 📦 **Submodule Management** - All projects are included as Git submodules
-- 📊 **Documentation** - Automatically generated lists of all projects
-- 🔍 **Discovery** - Easy browsing of project portfolio by category
-- 🔄 **Synchronization** - Automatic updates when projects change
-
 ## 📦 Project Collections
 
 {{GROUPS}}
