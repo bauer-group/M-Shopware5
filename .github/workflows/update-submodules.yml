@@ -17,8 +17,10 @@ jobs:
   sync-plugins:
     name: Synchronize
     uses: bauer-group/automation-templates/.github/workflows/meta-repository-sync.yml@main
-    with:
+    with:      
       config-file: '.github/config/repository.json'
+
+      include-private: true
 
       generate-readme: true
       readme-template: '.github/config/README.template.md'
