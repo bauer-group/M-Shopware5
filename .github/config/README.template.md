@@ -4,21 +4,51 @@
 
 ---
 
-**Last synchronized:** {{DATE}}
+## Inhaltsverzeichnis
 
-## 🧩 Inhalt
-
-{{GROUPS}}
-
-## 🔄 Automatic Synchronization
-
-This repository is automatically maintained by GitHub Actions:
-
-- **Organisation**: **{{ORGANIZATION}}**
-- **Schedule**: Weekly updates every Saturday at 23:45 UTC
+- [{{TITLE}}](#title)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Übersicht](#übersicht)
+  - [Projektstruktur](#projektstruktur)
+  - [🔄 Automatische Synchronisierung](#-automatische-synchronisierung)
+  - [Lizenz](#lizenz)
+    - [Hinweis](#hinweis)
 
 ---
 
-*This README is automatically generated. Do not edit manually - changes will be overwritten.*
+## Übersicht
 
-*Generated on {{DATE}}*
+**Letzte Synchronisierung:** {{DATE}}
+
+Dieses Repository enthält eine kuratierte Sammlung von Projekten der {{ORGANIZATION}}, die automatisch verwaltet und aktualisiert werden.
+
+---
+
+## Projektstruktur
+
+{{GROUPS}}
+
+---
+
+## 🔄 Automatische Synchronisierung
+
+Dieses Repository wird vollständig automatisiert durch GitHub Actions verwaltet:
+
+| Parameter | Wert |
+|-----------|------|
+| **Organisation** | {{ORGANIZATION}} |
+| **Aktualisierungsplan** | Wöchentlich, jeden Samstag um 23:45 UTC |
+
+---
+
+## Lizenz
+
+Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beachten Sie die jeweiligen LICENSE-Dateien in den Projekt-Repositories.
+
+---
+
+### Hinweis
+
+> **⚠️ Wichtig:** Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
+
+*Generiert am: {{DATE}}*
