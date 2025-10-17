@@ -35,12 +35,19 @@ jobs:
         run: |
           ORG="${{ github.repository_owner }}"
           echo "Fetching repos for org: $ORG"
+
+          # Abrufen der Repos mit Topic shopware5-plugins
           gh api orgs/$ORG/repos --paginate --jq '
             [.[] 
               | select(.topics[]? == "shopware5-plugins") 
-              | {name: .name, html_url: .html_url, description: .description, default_branch: .default_branch}
+              | {name: .name, default_branch: .default_branch, html_url: .html_url, description: .description}
             ]' > repos.json
-          echo "Found $(jq length repos.json) repositories with topic shopware5-plugins."
+
+          # JSON-Felder sortieren und pretty-formatieren
+          jq '[.[] | {name, default_branch, html_url, description}]' repos.json | jq . > repos_pretty.json
+          mv repos_pretty.json repos.json
+
+          echo "Found $(jq length repos.json) repositories with topic shopware5-plugins:"
           jq -r '.[].name' repos.json
 
       - name: Sync submodules (add / update / remove)
@@ -66,9 +73,9 @@ jobs:
           echo "🔄 Syncing submodules..."
           while read -r row; do
             name=$(echo "$row" | jq -r '.name')
+            branch=$(echo "$row" | jq -r '.default_branch')
             url=$(echo "$row" | jq -r '.html_url')
             desc=$(echo "$row" | jq -r '.description')
-            branch=$(echo "$row" | jq -r '.default_branch')
             clean_name=$(echo "$name" | sed -E 's/^SWP[-_]//i')
             path="$BASE_DIR/$clean_name"
 
@@ -85,8 +92,8 @@ jobs:
               )
             fi
 
-            # Submodule soll auf aktuelles Commit des Default-Branches zeigen
-            (cd "$path" && latest_commit=$(git rev-parse HEAD))
+            # Submodule auf aktuelles Commit setzen
+            latest_commit=$(cd "$path" && git rev-parse HEAD)
             git add "$path"
           done < <(jq -c '.[]' repos.json)
 
