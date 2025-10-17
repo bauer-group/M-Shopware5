@@ -1,0 +1,13 @@
+{
+  "title": "🛒 Shopware 5",
+  "description": "🧩 Dieses Repository bündelt automatisch alle **Shopware 5 Plugins** aus der Organisation `bauer-group` mit dem Topic `shopware5-plugins`.",
+  "groups": [
+    {
+      "topic": "shopware5-plugins",
+      "folder": "Plugins",
+      "remove_prefix": "^SWP[-_]",
+      "name": "📦 Enthaltene Plugins",
+      "description": "Die gesamte Sammlung von Plugins für Shopware 5"
+    }
+  ]
+}
