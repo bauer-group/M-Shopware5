@@ -2,6 +2,8 @@ name: Update Shopware 5 Submodules
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [trigger-from-repository]    
   schedule:
     - cron: "45 23 * * 6"  # jeden Samstag 23:45 UTC
 
