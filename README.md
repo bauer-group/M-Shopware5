@@ -6,7 +6,7 @@
 
 ## Projektstruktur
 
-**Letzte Synchronisierung:** 2025-10-18 00:27 UTC
+**Letzte Synchronisierung:** 2025-10-18 00:32 UTC
 [![Synchronisierung](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml/badge.svg)](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml)
 
 Dieses Repository enthält eine kuratierte Sammlung von Projekten der `bauer-group`, die automatisch verwaltet und aktualisiert werden.
@@ -85,4 +85,4 @@ Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beacht
 
 > **⚠️ Wichtig:** Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
 
-*Generiert am: 2025-10-18 00:27 UTC*
+*Generiert am: 2025-10-18 00:32 UTC*
