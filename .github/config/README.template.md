@@ -7,6 +7,7 @@
 ## Projektstruktur
 
 **Letzte Synchronisierung:** {{DATE}}
+[![Synchronisierung](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml/badge.svg)](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml)
 
 Dieses Repository enthält eine kuratierte Sammlung von Projekten der `{{ORGANIZATION}}`, die automatisch verwaltet und aktualisiert werden.
 
