@@ -4,27 +4,12 @@
 
 ---
 
-## Inhaltsverzeichnis
-
-- [🛒 Shopware 5](#title)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Übersicht](#übersicht)
-  - [Projektstruktur](#projektstruktur)
-  - [🔄 Automatische Synchronisierung](#-automatische-synchronisierung)
-  - [Lizenz](#lizenz)
-    - [Hinweis](#hinweis)
-
----
-
-## Übersicht
-
-**Letzte Synchronisierung:** 2025-10-17 23:50 UTC
-
-Dieses Repository enthält eine kuratierte Sammlung von Projekten der bauer-group, die automatisch verwaltet und aktualisiert werden.
-
----
-
 ## Projektstruktur
+
+**Letzte Synchronisierung:** 2025-10-18 00:04 UTC
+
+Dieses Repository enthält eine kuratierte Sammlung von Projekten der `bauer-group`, die automatisch verwaltet und aktualisiert werden.
+
 
 ## 📦 Enthaltene Plugins
 
@@ -74,25 +59,21 @@ Die gesamte Sammlung von Plugins für Shopware 5.
 
 ---
 
-## 🔄 Automatische Synchronisierung
+### 🔄 Automatische Synchronisierung
 
-Dieses Repository wird vollständig automatisiert durch GitHub Actions verwaltet:
+Dieses Repository wird vollständig automatisiert durch GitHub Actions verwaltet.
 
 | Parameter | Wert |
 |-----------|------|
 | **Organisation** | bauer-group |
 | **Aktualisierungsplan** | Wöchentlich, jeden Samstag um 23:45 UTC |
 
----
-
-## Lizenz
+### Lizenz
 
 Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beachten Sie die jeweiligen LICENSE-Dateien in den Projekt-Repositories.
-
----
 
 ### Hinweis
 
 > **⚠️ Wichtig:** Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
 
-*Generiert am: 2025-10-17 23:50 UTC*
+*Generiert am: 2025-10-18 00:04 UTC*
