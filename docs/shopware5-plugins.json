@@ -55,6 +55,17 @@
     "updated_at": "2025-10-17T19:15:22Z"
   },
   {
+    "name": "SWP-BauergroupTaxdoo",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-BauergroupTaxdoo",
+    "git_url": "git://github.com/bauer-group/SWP-BauergroupTaxdoo.git",
+    "description": "Integration des Consent Managers von Cookie First (cookiefirst.com).",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:26Z"
+  },
+  {
     "name": "SWP-BootstrapIntegration",
     "default_branch": "main",
     "html_url": "https://github.com/bauer-group/SWP-BootstrapIntegration",
@@ -121,6 +132,17 @@
     "updated_at": "2025-10-17T19:14:55Z"
   },
   {
+    "name": "SWP-CustomItversand",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-CustomItversand",
+    "git_url": "git://github.com/bauer-group/SWP-CustomItversand.git",
+    "description": "Das Plugin setzt die Anpassungen für it-versand.com um.",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:11Z"
+  },
+  {
     "name": "SWP-CustomPriceFluctuation",
     "default_branch": "main",
     "html_url": "https://github.com/bauer-group/SWP-CustomPriceFluctuation",
@@ -141,6 +163,17 @@
       "shopware5-plugins"
     ],
     "updated_at": "2025-10-17T19:15:13Z"
+  },
+  {
+    "name": "SWP-CustomStockImport",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-CustomStockImport",
+    "git_url": "git://github.com/bauer-group/SWP-CustomStockImport.git",
+    "description": "Das Plugin übernimmt Lagerbestände aus den angegebenen Lagerbestandsquellen.",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:14Z"
   },
   {
     "name": "SWP-CustomerDataInTemplate",
@@ -264,6 +297,17 @@
     "updated_at": "2025-10-17T19:15:18Z"
   },
   {
+    "name": "SWP-MilaIntegration",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-MilaIntegration",
+    "git_url": "git://github.com/bauer-group/SWP-MilaIntegration.git",
+    "description": "Das Plugin schickt einn Milaauftrag für Bestellpositionen, die einen Mila Service enthalten.",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:19Z"
+  },
+  {
     "name": "SWP-OrderStatusAutomation",
     "default_branch": "main",
     "html_url": "https://github.com/bauer-group/SWP-OrderStatusAutomation",
@@ -284,6 +328,28 @@
       "shopware5-plugins"
     ],
     "updated_at": "2025-10-17T19:15:02Z"
+  },
+  {
+    "name": "SWP-PaymentDTA",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-PaymentDTA",
+    "git_url": "git://github.com/bauer-group/SWP-PaymentDTA.git",
+    "description": "Das Plugin erzeugt für alle Bestellungen mit der Zahlungsart Lastschrift eine Datenträgeraustauschdatei zum Einlesen in Ihr Zahlungsverkehrsprogramm. Das Modul wurde mit VR-NetWorld, SFirm und Starmoney in den aktuellen Versionen getestet (Stand: 28.05.2012).Vorteile:&nbsp;- Einfacher Einzug der Lastschriften per Datenaustausch zum Bankingprogra...",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:39Z"
+  },
+  {
+    "name": "SWP-PaymentSEPA",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-PaymentSEPA",
+    "git_url": "git://github.com/bauer-group/SWP-PaymentSEPA.git",
+    "description": "Das Plugin erzeugt für alle Bestellungen mit der Zahlungsart SEPA-Basisastschrift eine Datei zum Einlesen in Ihr Zahlungsverkehrsprogramm. Das Modul wurde mit VR-NetWorld, SFirm und Starmoney in den aktuellen Versionen getestet (Stand: 20.01.2014).Vorteile:&nbsp;- Einfacher Einzug der SEPA-Basislastschriften per Datenaustausch zum Bankingprogram...",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:41Z"
   },
   {
     "name": "SWP-RemoveBackground",
@@ -374,6 +440,17 @@
     "updated_at": "2025-10-17T19:15:03Z"
   },
   {
+    "name": "SWP-TrackingSystem",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-TrackingSystem",
+    "git_url": "git://github.com/bauer-group/SWP-TrackingSystem.git",
+    "description": "Das Plugin ermöglich ein erweitertes DHL Tracking in ihrem Shop.",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:27Z"
+  },
+  {
     "name": "SWP-TwitterTweet",
     "default_branch": "main",
     "html_url": "https://github.com/bauer-group/SWP-TwitterTweet",
@@ -383,6 +460,17 @@
       "shopware5-plugins"
     ],
     "updated_at": "2025-10-17T19:15:39Z"
+  },
+  {
+    "name": "SWP-VoteAPI",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-VoteAPI",
+    "git_url": "git://github.com/bauer-group/SWP-VoteAPI.git",
+    "description": "Das Plugin erweitert die API um die Mögichkeit Bewertungen  zum Artikel per API und Downloaod anzusprechen. Ein Download aller Bewertungen (Export) als JSONL ist möglich unter der URL '/PluginBAUERGROUPVote/download?hash=XXXX'. Die CRUD API ist unter '/api/votes' erreichbar.",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-10-17T19:15:05Z"
   },
   {
     "name": "SWP-WarrantyReminder",
