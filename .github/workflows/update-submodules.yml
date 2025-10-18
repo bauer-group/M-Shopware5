@@ -34,3 +34,5 @@ jobs:
       auto-commit: true
       commit-message: '🔄 Auto-Sync Projects'
       # base-branch: ''  # Auto-detect (default)
+    secrets:
+      GITHUB_PAT: ${{ secrets.PAT_READONLY_ORGANISATION }}
