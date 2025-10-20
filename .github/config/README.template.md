@@ -33,6 +33,6 @@ Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beacht
 
 ### ⚠️ Wichtiger Hinweis
 
-> Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
+Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
 
 *Generiert am: {{DATE}}*
