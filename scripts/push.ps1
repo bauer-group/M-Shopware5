@@ -93,10 +93,14 @@ foreach ($submodule in $submodules) {
 
         # Push changes
         git -C $submodule push origin $submoduleBranch
-        $processedCount++
-        $updatedSubmodules += $submodule
 
-        Write-Host "  Committed and pushed successfully" -ForegroundColor Green
+        if ($LASTEXITCODE -eq 0) {
+            $processedCount++
+            $updatedSubmodules += $submodule
+            Write-Host "  Committed and pushed successfully" -ForegroundColor Green
+        } else {
+            Write-Host "  Error: Push failed, skipping submodule reference update" -ForegroundColor Red
+        }
     }
 }
 
