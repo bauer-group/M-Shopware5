@@ -1,4 +1,4 @@
-# Clone X-Shopware5 repository with all submodules (Windows PowerShell)
+# Clone a repository with all submodules (Windows PowerShell)
 # Supports Git LFS
 
 param(

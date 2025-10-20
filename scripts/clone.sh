@@ -1,5 +1,5 @@
 #!/bin/bash
-# Clone X-Shopware5 repository with all submodules (Linux/Mac)
+# Clone a repository with all submodules (Linux/Mac)
 # Supports Git LFS
 
 set -e
