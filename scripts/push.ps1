@@ -47,6 +47,7 @@ $submodules = git submodule status | ForEach-Object {
 Write-Host ""
 Write-Host "Step 2/4: Committing and pushing submodule changes..." -ForegroundColor White
 $processedCount = 0
+$updatedSubmodules = @()
 
 foreach ($submodule in $submodules) {
     $status = git -C $submodule status --porcelain 2>$null
@@ -54,22 +55,48 @@ foreach ($submodule in $submodules) {
     if (-not [string]::IsNullOrWhiteSpace($status)) {
         Write-Host "Processing submodule: $submodule" -ForegroundColor Yellow
 
+        # Get current branch
+        $submoduleBranch = git -C $submodule branch --show-current 2>$null
+
+        # If in detached HEAD state, try to checkout main branch
+        if ([string]::IsNullOrWhiteSpace($submoduleBranch)) {
+            Write-Host "  Submodule is in detached HEAD state, attempting to checkout main branch..." -ForegroundColor Yellow
+
+            # Try to find the default branch
+            $defaultBranch = git -C $submodule symbolic-ref refs/remotes/origin/HEAD 2>$null | ForEach-Object { $_ -replace 'refs/remotes/origin/', '' }
+
+            if ([string]::IsNullOrWhiteSpace($defaultBranch)) {
+                # Fallback: try common branch names
+                $defaultBranch = "main"
+                $branchExists = git -C $submodule rev-parse --verify $defaultBranch 2>$null
+                if (-not $branchExists) {
+                    $defaultBranch = "master"
+                }
+            }
+
+            git -C $submodule checkout $defaultBranch 2>$null
+            $submoduleBranch = git -C $submodule branch --show-current 2>$null
+
+            if ([string]::IsNullOrWhiteSpace($submoduleBranch)) {
+                Write-Host "  Error: Could not checkout a branch, skipping push" -ForegroundColor Red
+                continue
+            }
+
+            Write-Host "  Checked out branch: $submoduleBranch" -ForegroundColor Green
+        }
+
         # Add all changes
         git -C $submodule add -A
 
         # Commit changes
         git -C $submodule commit -m $CommitMessage 2>&1 | Out-Null
 
-        # Get current branch
-        $submoduleBranch = git -C $submodule branch --show-current 2>$null
+        # Push changes
+        git -C $submodule push origin $submoduleBranch
+        $processedCount++
+        $updatedSubmodules += $submodule
 
-        if (-not [string]::IsNullOrWhiteSpace($submoduleBranch)) {
-            # Push changes
-            git -C $submodule push origin $submoduleBranch
-            $processedCount++
-        } else {
-            Write-Host "  Warning: Submodule is in detached HEAD state, skipping push" -ForegroundColor Yellow
-        }
+        Write-Host "  Committed and pushed successfully" -ForegroundColor Green
     }
 }
 
@@ -77,6 +104,15 @@ if ($processedCount -eq 0) {
     Write-Host "No submodule changes to push" -ForegroundColor Gray
 } else {
     Write-Host "Pushed changes to $processedCount submodule(s)" -ForegroundColor Green
+
+    # Update submodule references in main repository
+    Write-Host ""
+    Write-Host "Updating submodule references in main repository..." -ForegroundColor Cyan
+    foreach ($submodule in $updatedSubmodules) {
+        # Stage the updated submodule reference
+        git add $submodule
+        Write-Host "  Updated reference for: $submodule" -ForegroundColor Green
+    }
 }
 
 # Update main repository submodule references
