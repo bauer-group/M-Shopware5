@@ -21,6 +21,7 @@ jobs:
       config-file: '.github/config/repository.json'
 
       include-private: true
+      skip-ci: true
 
       generate-readme: true
       readme-template: '.github/config/README.template.md'
