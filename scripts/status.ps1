@@ -44,10 +44,10 @@ git submodule foreach --quiet 'git status --porcelain' | Out-String -Stream | Fo
         $hasChanges = git -C $currentSubmodule status --porcelain
 
         if ([string]::IsNullOrWhiteSpace($hasChanges)) {
-            Write-Host "✓ $currentSubmodule ($submoduleBranch)" -ForegroundColor Green
+            Write-Host "[OK] $currentSubmodule ($submoduleBranch)" -ForegroundColor Green
             $cleanCount++
         } else {
-            Write-Host "⚠ $currentSubmodule ($submoduleBranch) - uncommitted changes" -ForegroundColor Yellow
+            Write-Host "[!] $currentSubmodule ($submoduleBranch) - uncommitted changes" -ForegroundColor Yellow
             git -C $currentSubmodule status --short | ForEach-Object { Write-Host "  $_" }
             $dirtyCount++
         }
