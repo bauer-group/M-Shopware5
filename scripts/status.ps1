@@ -34,23 +34,30 @@ Write-Host "Submodules:" -ForegroundColor Cyan
 $cleanCount = 0
 $dirtyCount = 0
 
-git submodule foreach --quiet 'git status --porcelain' | Out-String -Stream | ForEach-Object {
-    $line = $_.Trim()
-    if ($line -match "^Entering '(.+)'$") {
-        $currentSubmodule = $matches[1]
-        $submoduleBranch = git -C $currentSubmodule branch --show-current
+# Get all submodules
+$submodules = git submodule status | ForEach-Object {
+    if ($_ -match '^\s*[+-]?[0-9a-f]+\s+(.+?)\s+') {
+        $matches[1]
+    }
+}
 
-        # Check if this submodule has changes
-        $hasChanges = git -C $currentSubmodule status --porcelain
+foreach ($submodule in $submodules) {
+    # Get branch name
+    $submoduleBranch = git -C $submodule branch --show-current 2>$null
+    if ([string]::IsNullOrWhiteSpace($submoduleBranch)) {
+        $submoduleBranch = "detached HEAD"
+    }
 
-        if ([string]::IsNullOrWhiteSpace($hasChanges)) {
-            Write-Host "[OK] $currentSubmodule ($submoduleBranch)" -ForegroundColor Green
-            $cleanCount++
-        } else {
-            Write-Host "[!] $currentSubmodule ($submoduleBranch) - uncommitted changes" -ForegroundColor Yellow
-            git -C $currentSubmodule status --short | ForEach-Object { Write-Host "  $_" }
-            $dirtyCount++
-        }
+    # Check if this submodule has changes
+    $hasChanges = git -C $submodule status --porcelain 2>$null
+
+    if ([string]::IsNullOrWhiteSpace($hasChanges)) {
+        Write-Host "[OK] $submodule ($submoduleBranch)" -ForegroundColor Green
+        $cleanCount++
+    } else {
+        Write-Host "[!] $submodule ($submoduleBranch) - uncommitted changes" -ForegroundColor Yellow
+        git -C $submodule status --short | ForEach-Object { Write-Host "  $_" }
+        $dirtyCount++
     }
 }
 
