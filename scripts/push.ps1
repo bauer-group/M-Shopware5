@@ -33,32 +33,50 @@ if ([string]::IsNullOrWhiteSpace($CommitMessage)) {
 # Get current branch
 $currentBranch = git branch --show-current
 
-# Check for changes in submodules
+# Get all submodules
 Write-Host ""
 Write-Host "Step 1/4: Checking for submodule changes..." -ForegroundColor White
-$hasSubmoduleChanges = $false
-git submodule foreach --quiet 'git status --porcelain' | ForEach-Object {
-    if ($_.Trim()) {
-        $hasSubmoduleChanges = $true
+
+$submodules = git submodule status | ForEach-Object {
+    if ($_ -match '^\s*[+-]?[0-9a-f]+\s+(.+?)\s+') {
+        $matches[1]
     }
 }
 
-# Commit and push submodules if there are changes
-if ($hasSubmoduleChanges) {
-    Write-Host ""
-    Write-Host "Step 2/4: Committing and pushing submodule changes..." -ForegroundColor White
-    git submodule foreach "
-        `$status = git status --porcelain
-        if (`$status) {
-            Write-Host 'Processing submodule:' `$name
-            git add -A
-            git commit -m '$CommitMessage' 2>`$null
-            git push origin `$(git branch --show-current)
+# Process each submodule
+Write-Host ""
+Write-Host "Step 2/4: Committing and pushing submodule changes..." -ForegroundColor White
+$processedCount = 0
+
+foreach ($submodule in $submodules) {
+    $status = git -C $submodule status --porcelain 2>$null
+
+    if (-not [string]::IsNullOrWhiteSpace($status)) {
+        Write-Host "Processing submodule: $submodule" -ForegroundColor Yellow
+
+        # Add all changes
+        git -C $submodule add -A
+
+        # Commit changes
+        git -C $submodule commit -m $CommitMessage 2>&1 | Out-Null
+
+        # Get current branch
+        $submoduleBranch = git -C $submodule branch --show-current 2>$null
+
+        if (-not [string]::IsNullOrWhiteSpace($submoduleBranch)) {
+            # Push changes
+            git -C $submodule push origin $submoduleBranch
+            $processedCount++
+        } else {
+            Write-Host "  Warning: Submodule is in detached HEAD state, skipping push" -ForegroundColor Yellow
         }
-    "
+    }
+}
+
+if ($processedCount -eq 0) {
+    Write-Host "No submodule changes to push" -ForegroundColor Gray
 } else {
-    Write-Host ""
-    Write-Host "Step 2/4: No submodule changes to push" -ForegroundColor White
+    Write-Host "Pushed changes to $processedCount submodule(s)" -ForegroundColor Green
 }
 
 # Update main repository submodule references
