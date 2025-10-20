@@ -4,7 +4,7 @@
 
 [![Synchronisierung](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml/badge.svg)](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml)
 
-**Letzte Synchronisierung:** 2025-10-20 11:59 UTC
+**Letzte Synchronisierung:** 2025-10-20 12:40 UTC
 
 ---
 
@@ -85,6 +85,6 @@ Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beacht
 
 ### ⚠️ Wichtiger Hinweis
 
-> Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
+Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
 
-*Generiert am: 2025-10-20 11:59 UTC*
+*Generiert am: 2025-10-20 12:40 UTC*
