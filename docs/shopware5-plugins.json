@@ -8,7 +8,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:06Z"
+    "updated_at": "2025-10-20T15:53:02Z"
   },
   {
     "name": "SWP-AppleIOS933Hotfix",
@@ -19,7 +19,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-20T14:17:53Z"
+    "updated_at": "2025-10-20T15:46:23Z"
   },
   {
     "name": "SWP-ArticleWeight",
@@ -30,7 +30,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:30Z"
+    "updated_at": "2025-10-20T15:53:34Z"
   },
   {
     "name": "SWP-AutomaticDocuments",
@@ -41,7 +41,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:34Z"
+    "updated_at": "2025-10-20T15:53:37Z"
   },
   {
     "name": "SWP-BauergroupSlowArticleExport",
@@ -52,7 +52,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:22Z"
+    "updated_at": "2025-10-20T15:53:27Z"
   },
   {
     "name": "SWP-BauergroupTaxdoo",
@@ -63,7 +63,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:26Z"
+    "updated_at": "2025-10-20T15:53:31Z"
   },
   {
     "name": "SWP-BootstrapIntegration",
@@ -74,7 +74,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:07Z"
+    "updated_at": "2025-10-20T15:53:03Z"
   },
   {
     "name": "SWP-CheckoutCostCenter",
@@ -85,7 +85,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:35Z"
+    "updated_at": "2025-10-20T15:53:37Z"
   },
   {
     "name": "SWP-CheckoutPromotion",
@@ -96,7 +96,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:32Z"
+    "updated_at": "2025-10-20T15:53:35Z"
   },
   {
     "name": "SWP-CookieConsent",
@@ -107,7 +107,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:08Z"
+    "updated_at": "2025-10-20T15:53:04Z"
   },
   {
     "name": "SWP-CovidTickets",
@@ -118,7 +118,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:09Z"
+    "updated_at": "2025-10-20T15:53:05Z"
   },
   {
     "name": "SWP-CreateDocuments",
@@ -129,7 +129,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:14:55Z"
+    "updated_at": "2025-10-20T15:52:55Z"
   },
   {
     "name": "SWP-CustomItversand",
@@ -151,7 +151,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:12Z"
+    "updated_at": "2025-10-20T15:53:18Z"
   },
   {
     "name": "SWP-CustomPriceManager",
@@ -162,7 +162,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:13Z"
+    "updated_at": "2025-10-20T15:53:19Z"
   },
   {
     "name": "SWP-CustomStockImport",
@@ -173,7 +173,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:14Z"
+    "updated_at": "2025-10-20T15:53:20Z"
   },
   {
     "name": "SWP-CustomerDataInTemplate",
@@ -184,7 +184,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:36Z"
+    "updated_at": "2025-10-20T15:53:38Z"
   },
   {
     "name": "SWP-CustomerDiscount",
@@ -195,7 +195,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:10Z"
+    "updated_at": "2025-10-20T15:53:06Z"
   },
   {
     "name": "SWP-DocumentAPI",
@@ -217,7 +217,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:14:56Z"
+    "updated_at": "2025-10-20T15:52:56Z"
   },
   {
     "name": "SWP-DocumentSender",
@@ -228,7 +228,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:14:58Z"
+    "updated_at": "2025-10-20T15:52:57Z"
   },
   {
     "name": "SWP-DocumentsSafety",
@@ -239,7 +239,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:14:59Z"
+    "updated_at": "2025-10-20T15:52:58Z"
   },
   {
     "name": "SWP-FullIPAddress",
@@ -250,7 +250,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:00Z"
+    "updated_at": "2025-10-20T15:52:59Z"
   },
   {
     "name": "SWP-GermanVATChanger",
@@ -261,7 +261,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:15Z"
+    "updated_at": "2025-10-20T15:53:21Z"
   },
   {
     "name": "SWP-IndependentShippingNotification",
@@ -272,7 +272,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:16Z"
+    "updated_at": "2025-10-20T15:53:22Z"
   },
   {
     "name": "SWP-ListingPromotions",
@@ -283,7 +283,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:17Z"
+    "updated_at": "2025-10-20T15:53:23Z"
   },
   {
     "name": "SWP-MailMessageBlocker",
@@ -294,7 +294,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:18Z"
+    "updated_at": "2025-10-20T15:53:24Z"
   },
   {
     "name": "SWP-MilaIntegration",
@@ -305,7 +305,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:19Z"
+    "updated_at": "2025-10-20T15:53:25Z"
   },
   {
     "name": "SWP-OrderStatusAutomation",
@@ -316,7 +316,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:01Z"
+    "updated_at": "2025-10-20T15:53:00Z"
   },
   {
     "name": "SWP-OrderTimestampCorrection",
@@ -327,7 +327,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:02Z"
+    "updated_at": "2025-10-20T15:53:01Z"
   },
   {
     "name": "SWP-PaymentDTA",
@@ -338,7 +338,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:39Z"
+    "updated_at": "2025-10-20T15:53:42Z"
   },
   {
     "name": "SWP-PaymentSEPA",
@@ -349,7 +349,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:41Z"
+    "updated_at": "2025-10-20T15:53:43Z"
   },
   {
     "name": "SWP-RemoveBackground",
@@ -360,7 +360,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:20Z"
+    "updated_at": "2025-10-20T15:53:25Z"
   },
   {
     "name": "SWP-SMSNotifier",
@@ -371,7 +371,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:23Z"
+    "updated_at": "2025-10-20T15:53:28Z"
   },
   {
     "name": "SWP-SalesVolumeLimiter",
@@ -382,7 +382,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:21Z"
+    "updated_at": "2025-10-20T15:53:26Z"
   },
   {
     "name": "SWP-ShoppingWorldVimeo",
@@ -393,7 +393,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:37Z"
+    "updated_at": "2025-10-20T15:53:39Z"
   },
   {
     "name": "SWP-SocialRecommend",
@@ -404,7 +404,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:38Z"
+    "updated_at": "2025-10-20T15:53:40Z"
   },
   {
     "name": "SWP-SpecialSaleExtension",
@@ -415,7 +415,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:24Z"
+    "updated_at": "2025-10-20T15:53:29Z"
   },
   {
     "name": "SWP-StockBalanceByPackaging",
@@ -426,7 +426,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:25Z"
+    "updated_at": "2025-10-20T15:53:30Z"
   },
   {
     "name": "SWP-TaxIdentification",
@@ -437,7 +437,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:03Z"
+    "updated_at": "2025-10-20T15:53:01Z"
   },
   {
     "name": "SWP-TrackingSystem",
@@ -448,7 +448,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:27Z"
+    "updated_at": "2025-10-20T15:53:32Z"
   },
   {
     "name": "SWP-TwitterTweet",
@@ -459,7 +459,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:39Z"
+    "updated_at": "2025-10-20T15:53:41Z"
   },
   {
     "name": "SWP-VoteAPI",
@@ -481,7 +481,7 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:28Z"
+    "updated_at": "2025-10-20T15:53:32Z"
   },
   {
     "name": "SWP-ZammadIntegration",
@@ -492,6 +492,6 @@
     "topics": [
       "shopware5-plugins"
     ],
-    "updated_at": "2025-10-17T19:15:29Z"
+    "updated_at": "2025-10-20T15:53:33Z"
   }
 ]
