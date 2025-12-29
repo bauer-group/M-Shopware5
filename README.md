@@ -4,7 +4,7 @@
 
 [![Synchronisierung](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml/badge.svg)](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml)
 
-**Letzte Synchronisierung:** 2025-12-29 06:13 UTC
+**Letzte Synchronisierung:** 2025-12-29 06:20 UTC
 
 ---
 
@@ -55,6 +55,7 @@ Die gesamte Sammlung von Plugins für Shopware 5.
 | **StockBalanceByPackaging** | Das Plugin rechnet die übertragenenen Mengen über die REST API in VE, anhand der Angaben in der Grundpreisberechnung um. | [View](https://github.com/bauer-group/SWP-StockBalanceByPackaging) |
 | **TaxIdentification** | Das Plugin zeigt den Steuerausweis für jeden Steuersatz getrennt mit den zugehörigen Nettobeträgen an. Damit Entspricht die Rechnung dem § 14 Abs. 4 Nr. 7 UStG in Verbindung mit § 33 UStDV (es ist das nach Steuersätzen und einzelnen Steuerbefreiungen aufgeschlüsselte Netto-Entgelt anzugeben). | [View](https://github.com/bauer-group/SWP-TaxIdentification) |
 | **TwitterTweet** | Das Plugin fügt in der Artikeldetailansicht einen Tweet Button für Twitter ein. Der Button wird mit einer horizontale Zählung dargestellt. | [View](https://github.com/bauer-group/SWP-TwitterTweet) |
+| **VoteAPI** | Das Plugin erweitert die API um die Mögichkeit Bewertungen  zum Artikel per API und Downloaod anzusprechen. Ein Download aller Bewertungen (Export) als JSONL ist möglich unter der URL '/PluginBAUERGROUPVote/download?hash=XXXX'. Die CRUD API ist unter '/api/votes' erreichbar. | [View](https://github.com/bauer-group/SWP-VoteAPI) |
 | **WarrantyReminder** | Die Kunden werden nach Ablauf von einer definierten Zahl an Tagen, nach der Bestellung über die Option einer Garantieerweiterung informiert. | [View](https://github.com/bauer-group/SWP-WarrantyReminder) |
 | **ZammadIntegration** | Das Plugin ermöglich die einfache Einbindung des Zammad Chatwidgets in ihrem Shop. | [View](https://github.com/bauer-group/SWP-ZammadIntegration) |
 
@@ -79,4 +80,4 @@ Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beacht
 
 Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
 
-*Generiert am: 2025-12-29 06:13 UTC*
+*Generiert am: 2025-12-29 06:20 UTC*

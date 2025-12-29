@@ -33,5 +33,6 @@ SWP-SpecialSaleExtension
 SWP-StockBalanceByPackaging
 SWP-TaxIdentification
 SWP-TwitterTweet
+SWP-VoteAPI
 SWP-WarrantyReminder
 SWP-ZammadIntegration

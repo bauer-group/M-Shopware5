@@ -385,6 +385,17 @@
     "updated_at": "2025-10-20T15:53:41Z"
   },
   {
+    "name": "SWP-VoteAPI",
+    "default_branch": "main",
+    "html_url": "https://github.com/bauer-group/SWP-VoteAPI",
+    "git_url": "git://github.com/bauer-group/SWP-VoteAPI.git",
+    "description": "Das Plugin erweitert die API um die Mögichkeit Bewertungen  zum Artikel per API und Downloaod anzusprechen. Ein Download aller Bewertungen (Export) als JSONL ist möglich unter der URL '/PluginBAUERGROUPVote/download?hash=XXXX'. Die CRUD API ist unter '/api/votes' erreichbar.",
+    "topics": [
+      "shopware5-plugins"
+    ],
+    "updated_at": "2025-12-29T06:19:28Z"
+  },
+  {
     "name": "SWP-WarrantyReminder",
     "default_branch": "main",
     "html_url": "https://github.com/bauer-group/SWP-WarrantyReminder",

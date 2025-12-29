@@ -33,5 +33,6 @@ SpecialSaleExtension
 StockBalanceByPackaging
 TaxIdentification
 TwitterTweet
+VoteAPI
 WarrantyReminder
 ZammadIntegration

@@ -109,3 +109,7 @@
 [submodule "Plugins/TwitterTweet"]
 	path = Plugins/TwitterTweet
 	url = https://github.com/bauer-group/SWP-TwitterTweet
+[submodule "Plugins/VoteAPI"]
+	path = Plugins/VoteAPI
+	url = https://github.com/bauer-group/SWP-VoteAPI
+	branch = main
