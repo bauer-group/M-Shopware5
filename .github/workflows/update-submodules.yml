@@ -20,7 +20,7 @@ jobs:
     with:      
       config-file: '.github/config/repository.json'
 
-      include-private: true
+      include-private: false
       skip-ci: true
 
       generate-readme: true
