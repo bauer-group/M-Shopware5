@@ -109,35 +109,3 @@
 [submodule "Plugins/TwitterTweet"]
 	path = Plugins/TwitterTweet
 	url = https://github.com/bauer-group/SWP-TwitterTweet
-[submodule "Plugins/BauergroupTaxdoo"]
-	path = Plugins/BauergroupTaxdoo
-	url = https://github.com/bauer-group/SWP-BauergroupTaxdoo
-	branch = main
-[submodule "Plugins/CustomItversand"]
-	path = Plugins/CustomItversand
-	url = https://github.com/bauer-group/SWP-CustomItversand
-	branch = main
-[submodule "Plugins/CustomStockImport"]
-	path = Plugins/CustomStockImport
-	url = https://github.com/bauer-group/SWP-CustomStockImport
-	branch = main
-[submodule "Plugins/MilaIntegration"]
-	path = Plugins/MilaIntegration
-	url = https://github.com/bauer-group/SWP-MilaIntegration
-	branch = main
-[submodule "Plugins/PaymentDTA"]
-	path = Plugins/PaymentDTA
-	url = https://github.com/bauer-group/SWP-PaymentDTA
-	branch = main
-[submodule "Plugins/PaymentSEPA"]
-	path = Plugins/PaymentSEPA
-	url = https://github.com/bauer-group/SWP-PaymentSEPA
-	branch = main
-[submodule "Plugins/TrackingSystem"]
-	path = Plugins/TrackingSystem
-	url = https://github.com/bauer-group/SWP-TrackingSystem
-	branch = main
-[submodule "Plugins/VoteAPI"]
-	path = Plugins/VoteAPI
-	url = https://github.com/bauer-group/SWP-VoteAPI
-	branch = main
