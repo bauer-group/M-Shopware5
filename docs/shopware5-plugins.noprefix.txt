@@ -13,7 +13,6 @@ CustomPriceFluctuation
 CustomPriceManager
 CustomerDataInTemplate
 CustomerDiscount
-DocumentAPI
 DocumentAppend
 DocumentSender
 DocumentsSafety

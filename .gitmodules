@@ -22,9 +22,6 @@
 [submodule "Plugins/TaxIdentification"]
 	path = Plugins/TaxIdentification
 	url = https://github.com/bauer-group/SWP-TaxIdentification
-[submodule "Plugins/DocumentAPI"]
-	path = Plugins/DocumentAPI
-	url = https://github.com/bauer-group/SWP-DocumentAPI
 [submodule "Plugins/AmazonToolkit"]
 	path = Plugins/AmazonToolkit
 	url = https://github.com/bauer-group/SWP-AmazonToolkit

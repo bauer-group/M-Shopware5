@@ -4,7 +4,7 @@
 
 [![Synchronisierung](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml/badge.svg)](https://github.com/bauer-group/X-Shopware5/actions/workflows/update-submodules.yml)
 
-**Letzte Synchronisierung:** 2026-01-24 23:48 UTC
+**Letzte Synchronisierung:** 2026-01-31 23:51 UTC
 
 ---
 
@@ -35,7 +35,6 @@ Die gesamte Sammlung von Plugins für Shopware 5.
 | **CustomPriceManager** | Das Plugin ändert einen Artikelpreis, wenn dieser in einem bestimmtem Zeitraum nicht gekauft wurde. Dabei werden verschiedene Regeln angewendet, die entsprechend konfiguriert werden können. Die Preisanpassungen erfolgen abhängig von der Steuereinstellung. Die Preisanpassung gilt also immer auf den Verkauspreis (brutto/netto). | [View](https://github.com/bauer-group/SWP-CustomPriceManager) |
 | **CustomerDataInTemplate** | Das Plugin fügt im Template Variablen zur Benutzeridentifizierung hinzu. Diese können im Template zur inhaltlichen Anpassung verwendet werden. | [View](https://github.com/bauer-group/SWP-CustomerDataInTemplate) |
 | **CustomerDiscount** | Das Plugin ermöglich pro Kunde einen individuelle Rabatt im Warenkorb. Der individuelle Rabatt wird in einem Attributsfeld beim Kunden hinterlegt. | [View](https://github.com/bauer-group/SWP-CustomerDiscount) |
-| **DocumentAPI** | Das Plugin erweitert die API um die Möichkeit PDF Dokumente zur Bestellung abzurufen. | [View](https://github.com/bauer-group/SWP-DocumentAPI) |
 | **DocumentAppend** | Das Plugin fügt ein definierbares PDF Dokument automatisch im Rahmen der Dokumentenerstellung an das erstellte Dokument an. Im Ergebnis wird ein PDF Dokument erzeugt das aus dem Shopware Dokument und in den Folgeseiten aus dem bereitgestellten Dokument besteht. Unterstüzt werden Rechnung und Lieferschein. | [View](https://github.com/bauer-group/SWP-DocumentAppend) |
 | **DocumentSender** | Das Plugin sendet bereit erstellte PDF Dokumente zur Bestellung automatisch bei einem Statuswechsel in den konfigurierten Status. Das verwendete Mailtemplate entspricht dem bereits vorhandenen Mailtemplate von Shopware für die Statusbenachrichtigung. | [View](https://github.com/bauer-group/SWP-DocumentSender) |
 | **DocumentsSafety** | Das Plugin stellt sicher das alle erstellten Bestellungen die konfigurierten PDF Dokumente automatisch erstellt bekommen. Auch bei manuell in der Datenbank eingetragenen Bestellungen oder Bestellungen die im Backend erstellt wurden. | [View](https://github.com/bauer-group/SWP-DocumentsSafety) |
@@ -80,4 +79,4 @@ Die einzelnen Projekte können unterschiedliche Lizenzen verwenden. Bitte beacht
 
 Diese README-Datei wird automatisch generiert. Manuelle Änderungen werden beim nächsten Synchronisierungslauf überschrieben.
 
-*Generiert am: 2026-01-24 23:48 UTC*
+*Generiert am: 2026-01-31 23:51 UTC*

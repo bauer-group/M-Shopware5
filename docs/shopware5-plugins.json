@@ -165,17 +165,6 @@
     "updated_at": "2025-10-20T15:53:06Z"
   },
   {
-    "name": "SWP-DocumentAPI",
-    "default_branch": "main",
-    "html_url": "https://github.com/bauer-group/SWP-DocumentAPI",
-    "git_url": "git://github.com/bauer-group/SWP-DocumentAPI.git",
-    "description": "Das Plugin erweitert die API um die Möichkeit PDF Dokumente zur Bestellung abzurufen.",
-    "topics": [
-      "shopware5-plugins"
-    ],
-    "updated_at": "2025-10-17T19:15:04Z"
-  },
-  {
     "name": "SWP-DocumentAppend",
     "default_branch": "main",
     "html_url": "https://github.com/bauer-group/SWP-DocumentAppend",

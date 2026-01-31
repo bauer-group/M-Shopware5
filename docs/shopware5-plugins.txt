@@ -13,7 +13,6 @@ SWP-CustomPriceFluctuation
 SWP-CustomPriceManager
 SWP-CustomerDataInTemplate
 SWP-CustomerDiscount
-SWP-DocumentAPI
 SWP-DocumentAppend
 SWP-DocumentSender
 SWP-DocumentsSafety
